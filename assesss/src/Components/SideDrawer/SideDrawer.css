@@ -1,0 +1,191 @@
+/* SideDrawer.css */
+
+/* Base styles */
+.side-drawer {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 60px);
+    width: 100%;
+    overflow: hidden;
+}
+
+.side-drawer .row {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    overflow: scroll; 
+}
+
+.side-drawer .col-3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 1rem;
+}
+
+.side-drawer .col-9 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    padding: 5rem;
+    background-color: #F5F5F5;
+    flex: 1;
+    overflow: hidden;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.side-head {
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    width: 80%;
+    margin-bottom: 1rem;
+}
+
+.element-box {
+    flex: 1;
+    display: flex;
+    width: 100%;
+    max-width: 80%;
+    align-items: center;
+    border: 1px solid rgb(180, 180, 180);
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 0.5rem;
+    box-sizing: border-box;
+    height: 80px;
+    padding: 0.5rem;
+}
+
+.element-box:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+.inner-box {
+    height: 50px;
+    width: 80px;
+    background-color: rgb(180, 180, 180);
+    border-radius: 5px;
+}
+
+.text-box {
+    margin-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.text-box h5 {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+}
+
+.text-box span {
+    margin-bottom: 0rem;
+    font-size: 0.75rem;
+}
+
+.content-heading h5 {
+    font-size: 1rem;
+}
+
+.content-heading span {
+    margin-bottom: 0rem;
+    font-size: 0.75rem;
+}
+
+.content-box {
+    height: 120px;
+    background-color: #ddeefb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 20px;
+    overflow: auto;
+}
+
+.content-box h5 {
+    font-size: 1rem;
+}
+
+.content-box p {
+    margin-bottom: 0rem;
+    font-size: 0.6rem;
+}
+
+.element-box.active {
+    background-color: #f5f8fa;
+}
+
+.element-box.active .inner-box {
+    background-color: #B3D9F4;
+}
+
+.content-area {
+    overflow-y: auto;
+    width: 100%;
+    margin-top: 1rem;
+    flex: 1;
+    padding: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .side-drawer .col-3 {
+        width: 30%; /* Adjusted for slightly smaller screens */
+    }
+
+    .side-drawer .col-9 {
+        padding: 3rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .side-drawer .row {
+        flex-direction: column; /* Stack columns vertically */
+    }
+
+    .side-drawer .col-3, .side-drawer .col-9 {
+        width: 100%; /* Full width for both columns */
+    }
+
+    .side-drawer .col-9 {
+        padding: 1rem; /* Reduced padding for smaller screens */
+    }
+
+    .side-head {
+        width: 100%;
+        text-align: center;
+    }
+
+    .element-box {
+        max-width: 100%;
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .text-box {
+        margin-left: 0;
+        text-align: center;
+    }
+}

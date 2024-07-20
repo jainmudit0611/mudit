@@ -1,0 +1,30 @@
+.button-direction {
+    width: 100px;
+}
+
+.shadow-top {
+    position: relative;
+    width: 100%;
+}
+
+.shadow-top::before {
+    content: '';
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0;
+    height: 4px; 
+    background: transparent;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2); 
+    z-index: 1;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #fff;
+}

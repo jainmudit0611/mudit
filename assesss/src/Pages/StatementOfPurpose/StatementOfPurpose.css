@@ -1,0 +1,13 @@
+.box-size {
+    width: 85%;
+}
+
+.word-limit {
+    float: right;
+    font-size: 0.75rem;
+    color: #A7A7A7;
+}
+
+.placeholder-color::placeholder {
+    color: #888;
+}
